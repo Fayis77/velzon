@@ -1,0 +1,31 @@
+@use "base" as *;
+.footer{
+    .container{
+      
+ .row{
+    color: rgb(160, 160, 160);
+    width: auto;
+        display: flex;
+        justify-content: space-between;
+        .col-md-6{
+            width: 50%;
+            align-items: center;
+            display: flex;
+            .first-box{
+                display: flex;
+                align-items: center;
+                gap: 0.5em    ;
+                .copy{
+                    font-size: 14px;
+                }
+            }
+        }
+        .col-md-6.sec{
+            width: 50%;
+            display: flex;
+            justify-content: right;
+        }
+    }
+    }
+   
+}

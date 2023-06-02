@@ -1,0 +1,152 @@
+@use "base" as *;
+.main-content {
+  .row {
+    width: auto;
+    display: flex;
+    gap: 1em;
+    .left-row {
+      width: 30%;
+      box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+      border-radius: 3px;
+      background-color: #fff;
+      .top-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 1em;
+        border: 1px solid #ececec;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+       
+        #dropdown {
+          border: none;
+          cursor: pointer;
+        }
+      }
+      .round {
+        width: 100%;
+        padding: 1em;
+      }
+      .footer {
+      padding-bottom: 1.4em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5em;
+        .foot {
+          display: flex;
+          align-items: center;
+          .material-icons-round {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+    .right-row{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 70%;
+        border-radius: 3px;
+        box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+        .right-top{
+            display: flex;
+            padding: 1.5em 2em 0em 2em;
+            justify-content: space-between;
+            .right-section{
+                cursor: pointer;
+                padding: 0.2em;
+                color: rgb(57, 161, 175);
+                background-color: rgb(219, 249, 249);
+                border-radius: 4px;
+                .material-icons-round{
+                    font-size: 15px;
+                }
+                display: flex;
+                align-items: center;
+                h6{
+                    font-size: 12px;
+                }
+                &:hover{
+                    background-color: rgb(0, 183, 255);
+                    color: #fff;
+                    transition: all 0.3s ease-in-out;
+                }
+
+            }
+        }
+        .table-section{
+            #table{
+                width: 100%;
+               
+               flex-direction: column;
+               align-items: center;
+               #head{
+                border: 9px solid #141313;
+               font-size: 14px;
+               text-align: initial;
+               color: rgb(151, 150, 150);
+                background-color: rgba(208, 226, 226, 0.381);
+                th{
+                    border-radius: 3px;
+                    padding: 0.3em;
+                }
+               }
+                .sec{
+                    display: flex;
+                    align-items: center;
+                    gap: 1em;
+                   
+                    justify-content: flex-start;
+                    .img{
+                        width: 2em;
+                        border-radius: 50%;
+                    }
+                }
+                .third{
+                  
+                    text-align: start;
+                }
+                .last{
+                 text-orientation: sideways;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                }
+                .td{
+                    text-align: center;
+                    padding: 1.5em;
+                    border-radius: 5px;
+                    
+                    .stat.one{
+                        font-size: 12px;                        color: rgb(4, 90, 47);
+                        border-radius: 5px;
+                        font-weight: 900;
+                        background-color: rgba(8, 215, 42, 0.255);
+                    }
+                    .stat.pend{
+                        color: rgb(211, 110, 8);
+                        border-radius: 5px;
+                        font-size: 12px;
+                        font-weight: 900;
+                        background-color: rgba(211, 109, 8, 0.282);
+                    }
+                    .stat.unp{
+                        color: rgb(211, 8, 8);
+                        border-radius: 5px;
+                        font-size: 12px;                        font-weight: 900;
+                        background-color:  rgba(211, 8, 8, 0.425);
+                    }
+                    .amnt{
+                        color: rgba(4, 123, 63, 0.807);
+                        font-weight: 900;
+                        font-size: 13px;
+                    }
+                }
+            }
+           
+        }
+    }
+  }
+}

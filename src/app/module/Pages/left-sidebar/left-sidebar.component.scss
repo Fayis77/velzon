@@ -1,0 +1,27 @@
+.main-content {
+    display: flex;
+  }
+  
+  .row {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .body {
+    display: flex;
+    flex-direction: column;
+    .toggle-checkbox {
+        display: none;
+      }
+      
+      .das input:checked + label + ul {
+        display: block;
+      }
+      
+      .list {
+        display: none;
+      }
+      
+  }
+  
+

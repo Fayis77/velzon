@@ -1,0 +1,184 @@
+@use "base" as *;
+* {
+ 
+  height: auto;
+}
+.main-content {
+  display: flex;
+  width: auto;
+  gap: 5em;
+  background-color: rgb(241, 247, 248);
+  .container {
+    gap: 1.4em;
+    display: flex;
+    flex-direction: column;
+
+    .top-row {
+      display: flex;
+      .left-row {
+        width: 50%;
+      }
+      .right-row {
+        width: 50%;
+        display: flex;
+        justify-content: right;
+        gap: 2em;
+        align-items: center;
+    
+        .cal{
+           display: flex;
+           position: relative;
+           align-items: center;
+           
+          
+            .calendar{
+                border: none;
+                padding-right: 10em;
+                display: flex;
+                overflow: hidden;
+                cursor: pointer;
+                
+               
+            }
+            
+            .calndr{
+                position: absolute;
+                right: 0px;
+                background-color: #0d5087;
+                padding: 9px;
+                border-radius: 0 5px 5px 0;
+                color: #fff;
+                font-size: 18px;
+              
+            }
+        }
+        
+        input {
+          padding: 0.5em;
+          border-radius: 5px;
+        }
+        .add-prod {
+          display: flex;
+          align-items: center;
+          padding: 0.5em;
+          background-color: #2cc8eb42;
+          color: rgb(5, 181, 93);
+          border-radius: 5px;
+          cursor: pointer;
+          gap: 0.5em;
+          &:hover{
+            background-color: rgba(2, 83, 73, 0.782);
+            color: #fff;
+            transition: all 0.3s ease-in-out;
+          }
+          h5 {
+            background: none;
+          }
+          .material-icons-outlined {
+            background: none;
+            font-size: 16px;
+          }
+        }
+        .graph {
+          background-color: #2cc8eb42;
+          color: #28c483;
+          padding: 0.6em;
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+          border-radius: 5px;
+          &:hover{
+            background-color: #2cc8eb;
+            color: #fff;
+            transition: all 0.2s ease-in-out;
+          }
+          .material-icons-outlined {
+            background: none;
+            font-size: 20px;
+          }
+        }
+      }
+    }
+    .bottom-row {
+      display: flex;
+      flex-wrap: wrap;
+     justify-content: space-between;
+     
+   
+      .col-md-3 {
+        display: flex;
+        width: 24.2%;
+        justify-content: space-between;
+        background-color: #fff;
+        height: auto;
+        padding: 2em;
+        position: relative;
+        gap: 1em;
+        border-radius: 5px;
+        box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+        &:hover{
+          position: relative;
+          bottom: 5px;
+          transition: all 0.4s ease-in-out;
+          box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+        }
+        h5,h3 {
+          background: white;
+          font-size: 15px;
+        }
+
+        .inner-left {
+          background: white;
+          display: flex;
+          gap: 1em;
+          flex-direction: column;
+          .view-net{
+            text-decoration: underline;
+            color: gray;
+            font-size: 14px;
+          }
+          .tot{
+            color: gray;
+            font-size: 14px;
+          }
+        }
+        .inner-right {
+        
+          display: flex;
+          flex-direction: column;
+          align-items: end;
+          justify-content: space-between;
+          gap: 2em;
+          color: rgb(5, 181, 93);
+          .inner-top {
+            
+            display: flex;
+            align-items: center;
+            gap: 0.4em;
+          }
+          .arrow{
+       
+            font-size: 16px;
+          }
+          .inner-top.two{
+            color: orangered;
+          }
+          .inner-top.three{
+            color: gray;
+          }
+         
+        }
+        .inner-bottom {
+          background: rgb(163, 212, 205);
+          padding: 0.7em 0.7em 0.3em 0.7em;
+          border-radius: 5px;
+         
+          .material-icons-outlined {
+            background: none;
+            color: rgb(5, 181, 93);
+          }
+        }
+      }
+    }
+  }
+}

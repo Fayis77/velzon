@@ -1,0 +1,93 @@
+@use "base" as *;
+.main-content {
+  width: auto;
+
+  .row {
+    display: flex;
+    gap: 1em;
+    .left-row,
+    .right-row {
+      width: 50%;
+      box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+      border-radius: 5px;
+      .top-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1em;
+        #dropdown {
+          border: none;
+          cursor: pointer;
+        }
+        .sort{
+            font-size: 15px;
+            font-weight: 900;
+            cursor: pointer;
+        }
+      }
+      .table-row {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        .table-cnt {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 5.1em;
+          padding: 0.9em;
+          border: 0.2px solid rgb(223, 222, 222);
+          border-left: none;
+          border-right: none;
+          &:hover {
+            background-color: rgb(228, 244, 242);
+          }
+          .first-box {
+            display: flex;
+            gap: 1em;
+            .shirt {
+              width: 3em;
+              border-radius: 6px;
+            }
+          }
+        }
+      }
+      .footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1em;
+        .right-foot {
+          display: flex;
+          align-items: center;
+          text-align: center;
+          gap: 0.6em;
+          a {
+            background-color: rgb(237, 234, 234);
+            padding: 0.2em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: gray;
+
+            border-radius: 5px;
+            min-width: 2em;
+            &:hover {
+              background-color: rgb(136, 136, 233);
+            }
+            /* min-height: 6vh; */
+            font-size: 13px;
+            .arrow {
+              font-size: 19px;
+            }
+            .arrow.two {
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

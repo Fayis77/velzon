@@ -1,0 +1,19 @@
+// .container{
+//     width: 1100px;
+// }
+*{
+    box-sizing: border-box;
+}
+.dflex{
+    display: flex;
+}
+.container{
+    padding: 1em;
+    width: 100%;
+}
+h2{
+    font-size: 3rem;
+}
+.material-icons-round{
+    // color: gray;
+}
