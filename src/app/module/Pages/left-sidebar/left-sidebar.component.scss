@@ -1,27 +1,202 @@
 .main-content {
-    display: flex;
-  }
-  
-  .row {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .body {
-    display: flex;
-    flex-direction: column;
-    .toggle-checkbox {
-        display: none;
-      }
-      
-      .das input:checked + label + ul {
-        display: block;
-      }
-      
-      .list {
-        display: none;
-      }
-      
-  }
-  
+  display: flex;
+  position: fixed;
+  left: 0em;
+  top: 0;
+  height: 100vh;
+  width: auto;
+  background-color: rgba(31, 8, 132, 0);
+ 
+}
 
+.main-content h6 {
+  color: rgb(207, 207, 207);
+  &:hover {
+    color: #fff;
+  }
+}
+.dropdown-icon {
+  margin-left: 50px;
+}
+.dropdown-icon-two {
+  margin-left: 96px;
+}
+.dropdown-icon-three {
+  margin-left: 25px;
+}
+.dropdown-icon-four {
+  margin-left: 89px;
+}
+.dropdown-icon-five {
+  margin-left: 76px;
+}
+.dropdown-icon-six {
+  margin-left: 82px;
+}
+.dropdown-icon-seven {
+  margin-left: 52px;
+}
+.dropdown-icon-eight {
+  margin-left: 90px;
+}
+.dropdown-icon-nine {
+  margin-left: 87px;
+}
+.dropdown-icon-ten {
+  margin-left: 86px;
+}
+.dropdown-icon-eleven {
+  margin-left: 96px;
+}
+.dropdown-icon-twelve {
+  margin-left: 95px;
+}
+.dropdown-icon-thirteen {
+  margin-left: 61px;
+}
+
+.main-content label {
+  color: rgb(207, 207, 207);
+  cursor: pointer;
+  &:hover {
+    color: #fff;
+  }
+}
+.list {
+  color: rgb(207, 207, 207);
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding-left: 0.5em;
+  opacity: 0;
+  cursor: pointer;
+  li {
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 250px;
+  background-color: rgba(30, 8, 132, 0.822);
+  padding: 1em 0 1em 1.5em;
+  position: relative;
+  overflow-y: hidden;
+}
+
+.row .header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.row .header h2 {
+  color: #fff;
+}
+
+.row .body {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  overflow-y: hidden;
+  transition: overflow-y 0.3s;
+  padding-top: 1em;
+}
+
+.row .body .das {
+  display: flex;
+  gap: 1.3em;
+  flex-direction: column;
+}
+
+.row .body .dash {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  font-size: 15px;
+}
+
+.row .body .dash .material-icons-outlined {
+  font-size: 22px;
+}
+
+.row .body .toggle-checkbox {
+  display: none;
+}
+
+.row .body .das input:checked + label + ul {
+  display: block;
+  opacity: 1;
+  transition: all 0.5s linear;
+}
+
+.row .body .list {
+  display: none;
+}
+
+.row:hover .body {
+  overflow-y: auto;
+}
+#toggle-list1 {
+  transition: all 0.5s;
+}
+
+/* Custom Scrollbar Styles */
+.row .body::-webkit-scrollbar {
+  width: 6px;
+}
+
+.row .body::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.row .body::-webkit-scrollbar-thumb {
+  background-color: rgba(237, 235, 247, 0.5);
+  border-radius: 3px;
+}
+
+.row .body::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(33, 7, 150, 0.7);
+}
+.list {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease; /* Add transition property */
+}
+
+.toggle-checkbox:checked + .dash + .list {
+  max-height: 200px; /* Adjust the max height to your preference */
+}
+.e {
+  font-size: 31px;
+}
+@media screen and ((min-width: 760px) and (max-width:1024px)) {
+  .row {
+    .header{
+      display: none;
+    }
+    width: 4em;
+    h6 {
+      display: none;
+    }
+    .label.dash {
+      font-size: 0;
+    }
+    .text {
+      display: none;
+    }
+    .dropdown-icon,.dropdown-icon-eight,.dropdown-icon-eleven,.dropdown-icon-five,.dropdown-icon-four,.dropdown-icon-nine,.dropdown-icon-seven,.dropdown-icon-six,.dropdown-icon-ten,.dropdown-icon-thirteen,.dropdown-icon-three,.dropdown-icon-twelve,.dropdown-icon-two {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .row{
+  display: none;
+  }
+}

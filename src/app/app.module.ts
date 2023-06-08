@@ -12,6 +12,8 @@ import { GraphSectionComponent } from './module/Pages/graph-section/graph-sectio
 import { OrderSectionComponent } from './module/Pages/order-section/order-section.component';
 import { RightSidebarComponent } from './module/Pages/right-sidebar/right-sidebar.component';
 import { SalesSectionComponent } from './module/Pages/sales-section/sales-section.component';
+import { AnalyticsComponent } from './module/Pages/analytics/analytics.component';
+import { RouterLink } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -24,12 +26,13 @@ import { SalesSectionComponent } from './module/Pages/sales-section/sales-sectio
     GraphSectionComponent,
     OrderSectionComponent,
     RightSidebarComponent,
-    SalesSectionComponent
- 
+    SalesSectionComponent,
+    AnalyticsComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterLink
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -20,32 +20,42 @@
           border: none;
           cursor: pointer;
         }
-        .sort{
-            font-size: 15px;
-            font-weight: 900;
-            cursor: pointer;
+        .sort {
+          font-size: 15px;
+          font-weight: 900;
+          cursor: pointer;
         }
       }
       .table-row {
         display: flex;
         justify-content: space-between;
         width: 100%;
+        table {
+          width: 100%;
+          padding: 1em;
+          border: transparent;
+        }
+        tr {
+        }
 
         .table-cnt {
-          display: flex;
           justify-content: space-between;
           align-items: center;
           gap: 5.1em;
           padding: 0.9em;
-          border: 0.2px solid rgb(223, 222, 222);
+          border: none;
           border-left: none;
           border-right: none;
           &:hover {
             background-color: rgb(228, 244, 242);
           }
+          h6 {
+            color: gray;
+          }
           .first-box {
             display: flex;
             gap: 1em;
+            padding: 10px;
             .shirt {
               width: 3em;
               border-radius: 6px;
@@ -86,6 +96,67 @@
               font-size: 18px;
             }
           }
+        }
+      }
+    }
+  }
+}
+@media screen and ((min-width: 760px) and (max-width:1024px)) {
+  .main-content {
+    .row {
+      gap: 2em;
+      flex-direction: column;
+      .left-row {
+        width: 100%;
+        .top-row {
+        }
+      }
+      .right-row {
+        width: 100%;
+      }
+    }
+  }
+}
+@media screen and (max-width: 760px) {
+  .main-content {
+    .row {
+      gap: 2em;
+      flex-direction: column;
+      .left-row {
+        width: 100%;
+        overflow: scroll;
+        .top-row {
+          padding: 1em 1em 0em 1em;
+          h4 {
+            font-size: 14px;
+          }
+        }
+        .table-row {
+          .table-cnt {
+            h6 {
+              font-size: 11px;
+            }
+          }
+        }
+     
+        .footer {
+          flex-direction: column;
+          gap: 0.5em;
+        }
+      }
+      .right-row {
+        width: 100%;
+        overflow: scroll;
+        .table-row {
+          .table-cnt {
+            h6 {
+              font-size: 11px;
+            }
+          }
+        }
+        .footer {
+          flex-direction: column;
+          gap: 0.5em;
         }
       }
     }

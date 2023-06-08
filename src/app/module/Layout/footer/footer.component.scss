@@ -29,3 +29,14 @@
     }
    
 }
+@media screen and (max-width: 760px) {
+    .footer{
+        .row{
+            .col-md-6.sec{
+                h6{
+                    display: none;
+                }
+            }
+        }
+    }
+}

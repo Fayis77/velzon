@@ -1,3 +1,18 @@
 .main-content {
     background-color: rgb(241, 247, 248);
 }
+.dashboard{
+    padding-left: 15.7em;
+
+ 
+}
+@media screen and ((min-width: 760px) and (max-width:1024px)){
+    .dashboard{
+        padding-left: 4em;
+    }
+}
+@media screen and (max-width: 760px) {
+    .dashboard{
+        padding-left: 0em;
+    }
+}

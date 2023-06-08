@@ -11,12 +11,14 @@ import { OrderSectionComponent } from './Pages/order-section/order-section.compo
 import { RightSidebarComponent } from './Pages/right-sidebar/right-sidebar.component';
 import { SalesSectionComponent } from './Pages/sales-section/sales-section.component';
 import { FooterComponent } from './Layout/footer/footer.component';
+import { AnalyticsComponent } from './Pages/analytics/analytics.component';
 
 
 @NgModule({
   declarations: [
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+   
   ],
   imports: [
     CommonModule,

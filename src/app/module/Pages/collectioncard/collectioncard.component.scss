@@ -1,6 +1,5 @@
 @use "base" as *;
 * {
- 
   height: auto;
 }
 .main-content {
@@ -8,6 +7,7 @@
   width: auto;
   gap: 5em;
   background-color: rgb(241, 247, 248);
+  padding-top: 5em;
   .container {
     gap: 1.4em;
     display: flex;
@@ -24,35 +24,31 @@
         justify-content: right;
         gap: 2em;
         align-items: center;
-    
-        .cal{
-           display: flex;
-           position: relative;
-           align-items: center;
-           
-          
-            .calendar{
-                border: none;
-                padding-right: 10em;
-                display: flex;
-                overflow: hidden;
-                cursor: pointer;
-                
-               
-            }
-            
-            .calndr{
-                position: absolute;
-                right: 0px;
-                background-color: #0d5087;
-                padding: 9px;
-                border-radius: 0 5px 5px 0;
-                color: #fff;
-                font-size: 18px;
-              
-            }
+
+        .cal {
+          display: flex;
+          position: relative;
+          align-items: center;
+
+          .calendar {
+            border: none;
+            padding-right: 10em;
+            display: flex;
+            overflow: hidden;
+            cursor: pointer;
+          }
+
+          .calndr {
+            position: absolute;
+            right: 0px;
+            background-color: #0d5087;
+            padding: 9px;
+            border-radius: 0 5px 5px 0;
+            color: #fff;
+            font-size: 18px;
+          }
         }
-        
+
         input {
           padding: 0.5em;
           border-radius: 5px;
@@ -66,10 +62,13 @@
           border-radius: 5px;
           cursor: pointer;
           gap: 0.5em;
-          &:hover{
+          &:hover {
             background-color: rgba(2, 83, 73, 0.782);
             color: #fff;
             transition: all 0.3s ease-in-out;
+          }
+          h6{
+            font-size: 13px;
           }
           h5 {
             background: none;
@@ -87,7 +86,7 @@
           align-items: center;
           cursor: pointer;
           border-radius: 5px;
-          &:hover{
+          &:hover {
             background-color: #2cc8eb;
             color: #fff;
             transition: all 0.2s ease-in-out;
@@ -102,27 +101,30 @@
     .bottom-row {
       display: flex;
       flex-wrap: wrap;
-     justify-content: space-between;
-     
-   
+      justify-content: space-between;
+
       .col-md-3 {
         display: flex;
         width: 24.2%;
         justify-content: space-between;
         background-color: #fff;
         height: auto;
-        padding: 2em;
+        padding: 1.5em;
         position: relative;
         gap: 1em;
-        border-radius: 5px;
-        box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
-        &:hover{
+        transition-duration: 0.4s;
+        bottom: 7px;
+
+        border-radius: 3px;
+        box-shadow: 0px 0px 0px 0.3px rgba(0, 0, 0, 0.1);
+        &:hover {
           position: relative;
-          bottom: 5px;
-          transition: all 0.4s ease-in-out;
-          box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+          bottom: 11px;
+
+          box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
         }
-        h5,h3 {
+        h5,
+        h3 {
           background: white;
           font-size: 15px;
         }
@@ -132,18 +134,17 @@
           display: flex;
           gap: 1em;
           flex-direction: column;
-          .view-net{
+          .view-net {
             text-decoration: underline;
             color: gray;
             font-size: 14px;
           }
-          .tot{
+          .tot {
             color: gray;
             font-size: 14px;
           }
         }
         .inner-right {
-        
           display: flex;
           flex-direction: column;
           align-items: end;
@@ -151,32 +152,113 @@
           gap: 2em;
           color: rgb(5, 181, 93);
           .inner-top {
-            
             display: flex;
             align-items: center;
             gap: 0.4em;
           }
-          .arrow{
-       
+          .arrow {
             font-size: 16px;
           }
-          .inner-top.two{
+          .inner-top.two {
             color: orangered;
           }
-          .inner-top.three{
+          .inner-top.three {
             color: gray;
           }
-         
         }
         .inner-bottom {
           background: rgb(163, 212, 205);
           padding: 0.7em 0.7em 0.3em 0.7em;
           border-radius: 5px;
-         
+
           .material-icons-outlined {
             background: none;
             color: rgb(5, 181, 93);
           }
+        }
+      }
+    }
+  }
+}
+@media screen and ((min-width: 760px) and (max-width:1024px)) {
+  .main-content {
+    .container{
+      .top-row {
+        flex-direction: column;
+        gap: 1em;
+        .left-row {
+        }
+        .right-row {
+          width: 64%;
+          display: flex;
+          justify-content: left;
+          gap: 1em;
+          .add-prod{
+            padding: 0.6em;
+            h6{
+              font-size: 14px;
+            }
+            .plus{
+              font-size: 8px;
+            }
+          }
+        }
+      }
+      .bottom-row{
+        gap: 1.2em;
+        .col-md-3{
+          width: 22em;
+        }
+      }
+    }
+    
+  }
+}
+@media screen and (max-width:760px) {
+  .main-content{
+    padding-top: 3em;
+    .container{
+      .top-row {
+        flex-direction: column;
+        gap: 1em;
+        .left-row {
+          h3{
+            font-size: 16px;
+          }
+          p{
+            font-size: 10px;
+          }
+        }
+        .right-row {
+          width: 100%;
+          display: flex;
+          justify-content: left;
+          gap: 1em;
+          flex-wrap: wrap;
+          
+        .cal{
+          width: 100%;
+          .calendar{
+            width: 100%;
+          }
+          
+        }
+
+          .add-prod{
+            padding: 0.6em;
+            h6{
+              font-size: 14px;
+            }
+            .plus{
+              font-size: 8px;
+            }
+          }
+        }
+      }
+      .bottom-row{
+        gap: 1em;
+        .col-md-3{
+          width: 22em;
         }
       }
     }
